@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+const App = () => {
+  return <AddressLabel person={person} />;
+};
 
-function App() {
+const AddressLabel = ({ person }) => {
+  const { name, address, postCode } = person;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {name}
+      <br />
+      {postCode}
+      <br />
+      {address}
     </div>
   );
-}
+};
+
+const person = {
+  name: 'Full Name',
+  postCode: '123 Fake St.',
+  address: 'Boston, MA 02118',
+};
 
 export default App;
