@@ -1,25 +1,33 @@
 import './App.css';
-import { ReactComponent as ReactLogo } from './react-logo@3x.svg';
 
 const App = () => {
-  return <Poster Message={Message} />;
-};
-
-const Poster = ({ Message }) => {
-  const { title, text } = Message;
   return (
     <div className="container">
-      <ReactLogo className="logo" />
-      <br />
-      <span>{title}</span>
-      <br />
-      <span>{text}</span>
+      <input className="input" type="checkbox" />
+      <i className="fa fa-thumbtack icon" />
+      <Email text={textEmail} />
     </div>
   );
 };
-const Message = {
-  title: 'React',
-  text: 'The best thing since jQery, probably',
+
+const Email = ({ text }) => {
+  const { sender, subject, date, message } = text;
+  return (
+    <div className="Email-Container">
+      <span>{sender}</span>
+      <span>{subject}</span>
+      <span>{date}</span>
+      <br />
+      <span>{message}</span>
+    </div>
+  );
 };
 
+const textEmail = {
+  sender: 'React Newsletter',
+  subject: 'React Newsletter -Issue 36',
+  date: 'Jul 15',
+  message:
+    'eact Newsletter Issue 36 - July 15th 2016 Read this issue on the web',
+};
 export default App;
