@@ -1,36 +1,25 @@
 import './App.css';
+import { ReactComponent as ReactLogo } from './react-logo@3x.svg';
 
 const App = () => {
-  return <Card CreditCard={CreditCard} />;
+  return <Poster Message={Message} />;
 };
 
-const Card = ({ CreditCard }) => {
-  const { name, number, code, validThru, date, holder_name } = CreditCard;
+const Poster = ({ Message }) => {
+  const { title, text } = Message;
   return (
     <div className="container">
-      <div className="cc">
-        <span className="mastercard">{name}</span>
-        <br />
-        <br />
-        <span className="cc-number">{number}</span>
-        <br />
-        <span className="cc-code">{code}</span>
-        <span className="cc-validThru">{validThru}</span>
-        <span className="cc-date">{date}</span>
-        <br />
-        <span className="cc-name">{holder_name}</span>
-      </div>
+      <ReactLogo className="logo" />
+      <br />
+      <span>{title}</span>
+      <br />
+      <span>{text}</span>
     </div>
   );
 };
-
-const CreditCard = {
-  name: 'Big Bank, Inc.',
-  number: '1234 5678 8765 4321',
-  code: '1234',
-  validThru: 'VALID THRU:',
-  date: '08/19',
-  holder_name: 'Aureole',
+const Message = {
+  title: 'React',
+  text: 'The best thing since jQery, probably',
 };
 
 export default App;

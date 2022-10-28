@@ -5,7 +5,7 @@
 }
 
 .container {
-  background: whitesmoke;
+  background: black;
   bottom: 0;
   color: #e3e3e3;
   display: block;
@@ -17,41 +17,6 @@
   top: 0;
 }
 
-.cc {
-  background-color: #6e2b77;
-  border-radius: 10px;
-  display: block;
-  height: 195px;
-  width: 325px;
-  text-transform: uppercase;
-  margin: 60px auto;
-  font-size: 30px;
-}
-
-.mastercard {
-  font-weight: bold;
-  font-size: 20px;
-  margin-left: 100px;
-}
-
-.cc-number {
-  letter-spacing: 0.1rem;
-  font-weight: bold;
-  font-size: 20px;
-}
-
-.cc-code {
-  margin-right: 90px;
-  margin-bottom: 50px;
-  width: 30px;
-  height: 30px;
-}
-
-.cc-name {
-  margin-right: 170px;
-  margin-bottom: 50px;
-  width: 30px;
-  height: 30px;
-  font-weight: bold;
-  font-size: 20px;
+.logo {
+  margin-top: 50px;
 }
